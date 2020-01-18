@@ -5,18 +5,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>NBA stats!</title>
+<title>NBA Stat App</title>
 </head>
 <body>
 
 	<h1>NBA Stats App</h1>
 	<p>A place for NBA stats nerds to get statistics quickly!</p>
 	<br>
-	<div class="searchBox">
-		<form action="search.do" method="POST">
-			<input type="text" name="searchKeyword"> 
-			<input type="submit" value="SEARCH!">
-		</form>
-	</div>
+
+	<c:if test="${! empty team }">
+		<h3>Teams Stats</h3>
+		<table>
+			<tr>
+				<th>Team Name: ${team.teamName }</th>
+			</tr>
+			<tr>
+				<td>
+			</tr>
+
+		</table>
+
+	</c:if>
+
 </body>
 </html>
