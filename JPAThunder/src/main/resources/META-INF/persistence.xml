@@ -9,7 +9,7 @@
     </provider>
     
     <!-- tables go here -->
-    <class>com.skilldistillery.Thunder.entities.Team;</class>
+    <class>com.skilldistillery.Thunder.entities;</class>
 
 
 
