@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<h1>NBA Stats App</h1>
+	<h1><a href="/">NBA Stats App</a></h1>
 	<p>A place for NBA stats nerds to get statistics quickly!</p>
 	<br>
 
