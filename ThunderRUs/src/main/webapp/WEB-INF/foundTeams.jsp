@@ -16,8 +16,9 @@
 <c:if test="${! empty Teams }">
 <h3>Teams found!</h3>
 <c:forEach var="team" items="${Teams }">
-	  <h3>Teams Stats</h3>
+	   
 		<table>
+		<caption>Team Stats</caption>
 			<tr>
 				<th>Team </th>
 				<th>Games Played </th>
@@ -65,12 +66,19 @@
 				<td> ${team.steals }</td>
 				<td> ${team.blocks }</td>
 				<td> ${team.personalFouls }</td>
-
-				
 			</tr>
 
 		</table>
+	<br>
+	<form action="update.do" method="POST">
+		<input type="hidden" name="teamId" value="${team.id }">
+		<input type="submit" name="updateTeam" value="Update Stats">
+	</form>
 
+	<form action="delete.do" method="POST">
+		<input type="hidden" name="teamId" value="${team.id }">
+		<input type="submit" name="deleteTeam" value="Delete Team">
+	</form>
 
 </c:forEach>
 

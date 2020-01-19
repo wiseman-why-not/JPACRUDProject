@@ -84,6 +84,11 @@ public class Team {
 	@Column(name = "personal_fouls")
 	private Double personalFouls;
 
+
+
+	@Column(name = "logo")
+	private String logo;
+
 	// constructors
 	
 	public Team() {
@@ -97,6 +102,52 @@ public class Team {
 	}
 	
 
+	public Team(int id, String teamName, Integer gamesPlayed, Double pointsScoredAverage, Integer wins, Integer losses,
+			Double winLossPercentage, Double fieldGoalAttempt, Double fieldGoalMade, Double fieldGoalPercentage,
+			Double threePointAttempt, Double threePointMade, Double threePointPercentage, Double freeThrowAttempt,
+			Double freeThrowMade, Double freeThrowPercentage, Double reboundsAverage, Double offensiveRebound,
+			Double defensiveRebound, Double assists, Double turnOvers, Double steals, Double blocks,
+			Double personalFouls, String logo) {
+		super();
+		this.id = id;
+		this.teamName = teamName;
+		this.gamesPlayed = gamesPlayed;
+		this.pointsScoredAverage = pointsScoredAverage;
+		this.wins = wins;
+		this.losses = losses;
+		this.winLossPercentage = winLossPercentage;
+		this.fieldGoalAttempt = fieldGoalAttempt;
+		this.fieldGoalMade = fieldGoalMade;
+		this.fieldGoalPercentage = fieldGoalPercentage;
+		this.threePointAttempt = threePointAttempt;
+		this.threePointMade = threePointMade;
+		this.threePointPercentage = threePointPercentage;
+		this.freeThrowAttempt = freeThrowAttempt;
+		this.freeThrowMade = freeThrowMade;
+		this.freeThrowPercentage = freeThrowPercentage;
+		this.reboundsAverage = reboundsAverage;
+		this.offensiveRebound = offensiveRebound;
+		this.defensiveRebound = defensiveRebound;
+		this.assists = assists;
+		this.turnOvers = turnOvers;
+		this.steals = steals;
+		this.blocks = blocks;
+		this.personalFouls = personalFouls;
+		this.logo = logo;
+	}
+
+
+	public Team(int id, String teamName, Integer gamesPlayed, Double pointsScoredAverage, Integer wins,
+			Integer losses) {
+		super();
+		this.id = id;
+		this.teamName = teamName;
+		this.gamesPlayed = gamesPlayed;
+		this.pointsScoredAverage = pointsScoredAverage;
+		this.wins = wins;
+		this.losses = losses;
+	}
+	
 	public Team(int id, String teamName, Integer gamesPlayed, Double pointsScoredAverage, Integer wins, Integer losses,
 			Double winLossPercentage, Double fieldGoalAttempt, Double fieldGoalMade, Double fieldGoalPercentage,
 			Double threePointAttempt, Double threePointMade, Double threePointPercentage, Double freeThrowAttempt,
@@ -130,18 +181,6 @@ public class Team {
 		this.personalFouls = personalFouls;
 	}
 
-
-	public Team(int id, String teamName, Integer gamesPlayed, Double pointsScoredAverage, Integer wins,
-			Integer losses) {
-		super();
-		this.id = id;
-		this.teamName = teamName;
-		this.gamesPlayed = gamesPlayed;
-		this.pointsScoredAverage = pointsScoredAverage;
-		this.wins = wins;
-		this.losses = losses;
-	}
-	
 	// methods
 	public int getId() {
 		return id;
@@ -335,6 +374,14 @@ public class Team {
 		this.personalFouls = personalFouls;
 	}
 
+	public String getLogo() {
+		return logo;
+	}
+	
+	public void setLogo(String logo) {
+		this.logo = logo;
+	}
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -351,8 +398,26 @@ public class Team {
 				.append(", offensiveRebound=").append(offensiveRebound).append(", defensiveRebound=")
 				.append(defensiveRebound).append(", assists=").append(assists).append(", turnOvers=").append(turnOvers)
 				.append(", steals=").append(steals).append(", blocks=").append(blocks).append(", personalFouls=")
-				.append(personalFouls).append("]");
+				.append(personalFouls).append(", logo=").append(logo).append(", getId()=").append(getId())
+				.append(", getTeamName()=").append(getTeamName()).append(", getGamesPlayed()=").append(getGamesPlayed())
+				.append(", getPointsScoredAverage()=").append(getPointsScoredAverage()).append(", getWins()=")
+				.append(getWins()).append(", getLosses()=").append(getLosses()).append(", getWinLossPercentage()=")
+				.append(getWinLossPercentage()).append(", getFieldGoalAttempt()=").append(getFieldGoalAttempt())
+				.append(", getFieldGoalMade()=").append(getFieldGoalMade()).append(", getFieldGoalPercentage()=")
+				.append(getFieldGoalPercentage()).append(", getThreePointAttempt()=").append(getThreePointAttempt())
+				.append(", getThreePointMade()=").append(getThreePointMade()).append(", getThreePointPercentage()=")
+				.append(getThreePointPercentage()).append(", getFreeThrowAttempt()=").append(getFreeThrowAttempt())
+				.append(", getFreeThrowMade()=").append(getFreeThrowMade()).append(", getFreeThrowPercentage()=")
+				.append(getFreeThrowPercentage()).append(", getReboundsAverage()=").append(getReboundsAverage())
+				.append(", getOffensiveRebound()=").append(getOffensiveRebound()).append(", getDefensiveRebound()=")
+				.append(getDefensiveRebound()).append(", getAssists()=").append(getAssists())
+				.append(", getTurnOvers()=").append(getTurnOvers()).append(", getSteals()=").append(getSteals())
+				.append(", getBlocks()=").append(getBlocks()).append(", getPersonalFouls()=").append(getPersonalFouls())
+				.append(", getLogo()=").append(getLogo()).append(", getClass()=").append(getClass())
+				.append(", hashCode()=").append(hashCode()).append(", toString()=").append(super.toString())
+				.append("]");
 		return builder.toString();
 	}
+
 
 }

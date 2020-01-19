@@ -16,6 +16,7 @@
 	<c:if test="${! empty team }">
 		<h3>Teams Stats</h3>
 		<table>
+		<caption>Team Stats</caption>
 			<tr>
 				<th>Team </th>
 				<th>Games Played </th>

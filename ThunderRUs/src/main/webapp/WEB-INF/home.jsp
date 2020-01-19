@@ -18,5 +18,12 @@
 			<input type="submit" value="SEARCH!">
 		</form>
 	</div>
+	<br>
+	<div class="createTeam">
+		<form action="create.do" method="GET">
+			<input type="submit" name="createTeam" value="Create Team">
+		</form>
+	</div>
+
 </body>
 </html>

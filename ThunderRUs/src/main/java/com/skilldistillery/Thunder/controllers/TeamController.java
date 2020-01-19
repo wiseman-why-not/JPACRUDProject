@@ -1,5 +1,7 @@
 package com.skilldistillery.Thunder.controllers;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,5 +33,30 @@ public class TeamController {
 		model = model.addAttribute("team", dao.getTeamById(teamId));
 		
 		return "teamDetails";
+	}
+	@RequestMapping(path="/getAllTeam.do", method = RequestMethod.GET)
+	public String getAllTeams(@RequestParam("teamId") Integer teamId, Model model ) {
+		model = model.addAttribute("team", dao.getTeamById(teamId));
+		
+		return "teamDetails";
+	}
+	
+	@RequestMapping(path="/createTeam.do", method = RequestMethod.GET)
+	public String create(String keyword, Model model ) {
+		model = model.addAttribute("Teams", dao.getTeamByName(keyword));
+		return "editTeam";
+	}
+	
+	@RequestMapping(path="/update.do", method = RequestMethod.POST)
+	public String update(@RequestParam("teamId") Integer teamId, Model model ) {
+		model.addAttribute("team", dao.getTeamById(teamId));
+		return "editTeam";
+	}
+
+
+	@RequestMapping(path = "/delete.do", method = RequestMethod.GET)
+	public String delete(@RequestParam("teamId") Integer teamId, Model model) {
+		model = model.addAttribute("Teams", dao.getTeamById(teamId));
+		return "foundTeams";
 	}
 }
