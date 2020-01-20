@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<h1>
+	<h1 class="display-2">
 		<a href="/">NBA Stats App</a>
 	</h1>
 	<p>A place for NBA stats nerds to get statistics quickly!</p>
@@ -81,14 +81,15 @@
 				<div class="row justify-content-center">
 					<div class="col-4">
 						<form action="update.do" method="POST">
-							<input type="hidden" name="teamId" value="${team.id }"> <input
-								type="submit" name="updateTeam" value="Update Stats">
+							<input type="hidden" name="teamId" value="${team.id }"> 
+							<button type="submit" class="btn btn-primary" name="updateTeam" value="Update Stats">Update Stats</button>
 						</form>
 					</div>
 					<div class="col-4">
 						<form action="delete.do" method="POST">
-							<input type="hidden" name="teamId" value="${team.id }"> <input
-								type="submit" name="deleteTeam" value="Delete Team">
+							<input type="hidden" name="teamId" value="${team.id }"> 
+							<!-- <input type="submit" name="deleteTeam" value="Delete Team"> -->
+							<button type="submit" class="btn btn-danger" name="deleteTeam" value="Delete Team">Delete Team </button>
 						</form>
 					</div>
 							
