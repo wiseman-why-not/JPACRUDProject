@@ -36,12 +36,7 @@ public class TeamController {
 		
 		return "teamDetails";
 	}
-//	@RequestMapping(path="/getAllTeam.do", method = RequestMethod.GET)
-//	public String getAllTeams(@RequestParam("teamId") Integer teamId, Model model ) {
-//		model = model.addAttribute("team", dao.getTeamById(teamId));
-//		
-//		return "teamDetails";
-//	}
+
 	
 	@RequestMapping(path="/create.do", method = RequestMethod.GET)
 	public String create(String keyword, Model model ) {
