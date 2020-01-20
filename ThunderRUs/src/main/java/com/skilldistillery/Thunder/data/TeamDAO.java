@@ -16,4 +16,6 @@ public interface TeamDAO {
 
 	Team deleteTeam(Team team);
 
+	List<Team> showAllteams();
+
 }

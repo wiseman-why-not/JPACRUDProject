@@ -99,5 +99,13 @@ public class TeamDAOImpl implements TeamDAO {
 		return foundTeam;
 	}
 	
+	@Override
+	public List<Team> showAllteams(){
+		// query getting all teams in database.
+		String queryStatement = "SELECT team FROM Team team";
+		List<Team> allTeams = em.createQuery(queryStatement, Team.class).getResultList();
+		
+		return allTeams;
+	}
 
 }

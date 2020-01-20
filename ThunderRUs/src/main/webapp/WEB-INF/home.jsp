@@ -24,6 +24,19 @@
 			<input type="submit" name="createTeam" value="Create Team">
 		</form>
 	</div>
+	<br>
+	<c:if test="${! empty Teams }">
+	
+	<c:forEach var="team" items="${Teams }">
+	<a href="/">
+	<img alt="team's logo" src="${team.logo }">
+	<p>${team.teamName }</p>
+	</a>
+	<br>
+	</c:forEach>
+	
+	
+	</c:if>
 
 </body>
 </html>

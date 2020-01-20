@@ -17,8 +17,8 @@
 
 	<h2>Deleted Team</h2>
 	
-	<%-- <table>
 
+<table>
 		<caption>Team Stats</caption>
 		<tr>
 			<th>Team</th>
@@ -68,8 +68,8 @@
 			<td>${team.blocks }</td>
 			<td>${team.personalFouls }</td>
 		</tr>
+</table>
 
-	</table> --%>
 	<br>
 
 </body>

@@ -17,7 +17,8 @@ public class TeamController {
 	private TeamDAO dao;
 
 	@RequestMapping(path= {"/", "home.do"}, method = RequestMethod.GET)
-	public String home() {
+	public String home(Model model) {
+		model = model.addAttribute("Teams", dao.showAllteams());
 		return "home";
 	}
 	

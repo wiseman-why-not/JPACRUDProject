@@ -38,7 +38,7 @@
 	Steals: <input type="number" name="steals" min="0.0" max="100.00" step=".1" value="0" required><br>
 	Blocks: <input type="number" name="blocks" min="0.0" max="100.00" step=".1" value="0" required><br>
 	Personal Fouls: <input type="number" name="personalFouls" min="0.0" max="100.00" step=".1" value="0" required><br>
-	<input type="hidden" name="logo" value="https://seeklogo.com/images/T/tune-squad-logo-75EDDD647F-seeklogo.com.png">
+	<input type="hidden" name="logo" value="http://content.sportslogos.net/logos/6/982/thumbs/98281472018.gif">
 	<input type="submit" name="submit" value="Submit">
 	</fieldset>
 	</form>

@@ -38,6 +38,7 @@
 	Steals: <input type="number" name="steals" min="0.0" max="100.00" step=".1" required value="${team.steals }"><br>
 	Blocks: <input type="number" name="blocks" min="0.0" max="100.00" step=".1" required value="${team.blocks }"><br>
 	Personal Fouls: <input type="number" name="personalFouls" min="0.0" max="100.00" step=".1" required value="${team.personalFouls }"><br>
+	<input type="hidden" name="logo" value="${team.logo }">
 	<input type="hidden" name="id" value="${team.id }">
 	<input type="submit" name="submit" value="Submit">
 	</fieldset>
