@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>NBA Stats!</title>
+<jsp:include page="style.jsp"/>
 </head>
 <body>
 
