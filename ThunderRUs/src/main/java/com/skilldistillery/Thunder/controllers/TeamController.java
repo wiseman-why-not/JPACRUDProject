@@ -16,7 +16,7 @@ public class TeamController {
 	@Autowired
 	private TeamDAO dao;
 
-	@RequestMapping(path= {"/", "home.do"}, method = RequestMethod.GET)
+	@RequestMapping(path= {"/home.do", "/",}, method = RequestMethod.GET)
 	public String home(Model model) {
 		model = model.addAttribute("Teams", dao.showAllteams());
 		return "home";

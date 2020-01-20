@@ -17,7 +17,7 @@
 <body>
 <div class="container-fluid" >
 	<h1 class="display-2">
-		<a href="/">NBA Stats App</a>
+		<a href="home.do">NBA Stats App</a>
 	</h1>
 	<blockquote>A place for NBA stats nerds to get statistics quickly!</blockquote>
 	<br>
@@ -38,7 +38,7 @@
 	<div class="d-inline-flex p-2">
 	<c:if test="${! empty Teams }">
 		<c:forEach var="team" items="${Teams }">
-			<a href="/"> <img alt="team's logo" src="${team.logo }" class="img-thumbnail">
+			<a href="home.do"> <img alt="team's logo" src="${team.logo }" class="img-thumbnail">
 				<p>${team.teamName }</p>
 			</a>
 		</c:forEach>

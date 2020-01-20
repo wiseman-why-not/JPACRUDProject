@@ -16,7 +16,7 @@
 <body>
 
 	<h1 class="display-2">
-		<a href="/">NBA Stats App</a>
+		<a href="home.do">NBA Stats App</a>
 	</h1>
 	<blockquote>A place for NBA stats nerds to get statistics quickly!</blockquote>
 	<br>
