@@ -22,7 +22,6 @@ public class TeamDAOImpl implements TeamDAO {
 	public Team getTeamById(int teamId) {
 
 		Team foundTeam = em.find(Team.class, teamId);
-		System.out.println(foundTeam);
 		return foundTeam;
 
 	}
@@ -35,9 +34,6 @@ public class TeamDAOImpl implements TeamDAO {
 
 		List<Team> queryResults = em.createQuery(queryStatement, Team.class)
 				.setParameter("keyword", "%" + teamName + "%").getResultList();
-		for (Team team : queryResults) {
-			System.out.println(team.getTeamName());
-		}
 
 		return queryResults;
 	}
@@ -47,7 +43,6 @@ public class TeamDAOImpl implements TeamDAO {
 
 		em.persist(team);
 		em.flush();
-		System.out.println(team);
 		return team;
 
 	}
@@ -56,7 +51,6 @@ public class TeamDAOImpl implements TeamDAO {
 	public Team deleteTeam(Team team) {
 		Team foundTeam = em.find(Team.class, team.getId());
 
-		System.out.println("Team that will be removed" + foundTeam);
 		em.remove(foundTeam);
 		em.flush();
 		return foundTeam;

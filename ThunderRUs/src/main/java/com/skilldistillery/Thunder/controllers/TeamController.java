@@ -28,14 +28,14 @@ public class TeamController {
 		return "foundTeams";
 	}
 	
-
-	
-	@RequestMapping(path="/getTeam.do", method = RequestMethod.GET)
-	public String getSingleTeam(@RequestParam("teamId") Integer teamId, Model model ) {
-		model = model.addAttribute("team", dao.getTeamById(teamId));
-		
-		return "teamDetails";
-	}
+//
+//	
+//	@RequestMapping(path="/getTeam.do", method = RequestMethod.GET)
+//	public String getSingleTeam(@RequestParam("teamId") Integer teamId, Model model ) {
+//		model = model.addAttribute("team", dao.getTeamById(teamId));
+//		
+//		return "teamDetails";
+//	}
 
 	
 	@RequestMapping(path="/create.do", method = RequestMethod.GET)
@@ -67,7 +67,6 @@ public class TeamController {
 
 	@RequestMapping(path = "/delete.do", method = RequestMethod.POST)
 	public String delete(@RequestParam("teamId") Integer teamId, Model model) {
-		System.out.println(" *********** in the delete method in teamController *********");
 		Team teamToDelete = dao.getTeamById(teamId);
 		System.out.println(teamToDelete);
 		model = model.addAttribute("team", dao.deleteTeam(teamToDelete));
