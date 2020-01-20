@@ -65,7 +65,6 @@
 				<td> ${team.blocks }</td>
 				<td> ${team.personalFouls }</td>
 
-				
 			</tr>
 
 		</table>

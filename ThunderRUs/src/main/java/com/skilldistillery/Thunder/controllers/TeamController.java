@@ -28,6 +28,8 @@ public class TeamController {
 		return "foundTeams";
 	}
 	
+
+	
 	@RequestMapping(path="/getTeam.do", method = RequestMethod.GET)
 	public String getSingleTeam(@RequestParam("teamId") Integer teamId, Model model ) {
 		model = model.addAttribute("team", dao.getTeamById(teamId));

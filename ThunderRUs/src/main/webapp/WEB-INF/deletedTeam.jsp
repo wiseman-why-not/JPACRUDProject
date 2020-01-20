@@ -14,9 +14,7 @@
 	<p>A place for NBA stats nerds to get statistics quickly!</p>
 	<br>
 
-
 	<h2>Deleted Team</h2>
-	
 
 <table>
 		<caption>Team Stats</caption>

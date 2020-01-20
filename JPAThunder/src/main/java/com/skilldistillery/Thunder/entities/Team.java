@@ -145,39 +145,6 @@ public class Team {
 		this.wins = wins;
 		this.losses = losses;
 	}
-	
-//	public Team(int id, String teamName, Integer gamesPlayed, Double pointsScoredAverage, Integer wins, Integer losses,
-//			Double winLossPercentage, Double fieldGoalAttempt, Double fieldGoalMade, Double fieldGoalPercentage,
-//			Double threePointAttempt, Double threePointMade, Double threePointPercentage, Double freeThrowAttempt,
-//			Double freeThrowMade, Double freeThrowPercentage, Double reboundsAverage, Double offensiveRebound,
-//			Double defensiveRebound, Double assists, Double turnOvers, Double steals, Double blocks,
-//			Double personalFouls) {
-//		super();
-//		this.id = id;
-//		this.teamName = teamName;
-//		this.gamesPlayed = gamesPlayed;
-//		this.pointsScoredAverage = pointsScoredAverage;
-//		this.wins = wins;
-//		this.losses = losses;
-//		this.winLossPercentage = winLossPercentage;
-//		this.fieldGoalAttempt = fieldGoalAttempt;
-//		this.fieldGoalMade = fieldGoalMade;
-//		this.fieldGoalPercentage = fieldGoalPercentage;
-//		this.threePointAttempt = threePointAttempt;
-//		this.threePointMade = threePointMade;
-//		this.threePointPercentage = threePointPercentage;
-//		this.freeThrowAttempt = freeThrowAttempt;
-//		this.freeThrowMade = freeThrowMade;
-//		this.freeThrowPercentage = freeThrowPercentage;
-//		this.reboundsAverage = reboundsAverage;
-//		this.offensiveRebound = offensiveRebound;
-//		this.defensiveRebound = defensiveRebound;
-//		this.assists = assists;
-//		this.turnOvers = turnOvers;
-//		this.steals = steals;
-//		this.blocks = blocks;
-//		this.personalFouls = personalFouls;
-//	}
 
 	// methods
 	public int getId() {

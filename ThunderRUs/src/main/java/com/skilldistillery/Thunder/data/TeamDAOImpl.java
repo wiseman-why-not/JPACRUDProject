@@ -1,4 +1,4 @@
-  
+
 package com.skilldistillery.Thunder.data;
 
 import java.util.List;
@@ -15,47 +15,43 @@ import com.skilldistillery.Thunder.entities.Team;
 @Transactional
 public class TeamDAOImpl implements TeamDAO {
 
-
-//	private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("thunder");
-
 	@PersistenceContext
 	private EntityManager em;
 
 	@Override
 	public Team getTeamById(int teamId) {
-//		em = emf.createEntityManager();
+
 		Team foundTeam = em.find(Team.class, teamId);
 		System.out.println(foundTeam);
 		return foundTeam;
-		//return em.find(Team.class, teamId);
+
 	}
 
 	@Override
 	public List<Team> getTeamByName(String teamName) {
-//		em = emf.createEntityManager();
 
 		// query search
 		String queryStatement = "SELECT team FROM Team team WHERE teamName LIKE :keyword";
 
-		List<Team> queryResults = em.createQuery(queryStatement, Team.class).setParameter("keyword", "%" +teamName + "%")
-				.getResultList();
+		List<Team> queryResults = em.createQuery(queryStatement, Team.class)
+				.setParameter("keyword", "%" + teamName + "%").getResultList();
 		for (Team team : queryResults) {
 			System.out.println(team.getTeamName());
 		}
 
 		return queryResults;
 	}
+
 	@Override
 	public Team createTeam(Team team) {
 
-		
 		em.persist(team);
 		em.flush();
 		System.out.println(team);
 		return team;
-		//return em.find(Team.class, teamId);
+
 	}
-	
+
 	@Override
 	public Team deleteTeam(Team team) {
 		Team foundTeam = em.find(Team.class, team.getId());
@@ -64,13 +60,13 @@ public class TeamDAOImpl implements TeamDAO {
 		em.remove(foundTeam);
 		em.flush();
 		return foundTeam;
-		//return em.find(Team.class, teamId);
+
 	}
-	
+
 	@Override
 	public Team updateTeam(Team team) {
 		// query search
-		
+
 		Team foundTeam = em.find(Team.class, team.getId());
 		foundTeam.setTeamName(team.getTeamName());
 		foundTeam.setGamesPlayed(team.getGamesPlayed());
@@ -95,16 +91,16 @@ public class TeamDAOImpl implements TeamDAO {
 		foundTeam.setBlocks(team.getBlocks());
 		foundTeam.setPersonalFouls(team.getPersonalFouls());
 		foundTeam.setLogo(team.getLogo());
-		
+
 		return foundTeam;
 	}
-	
+
 	@Override
-	public List<Team> showAllteams(){
+	public List<Team> showAllteams() {
 		// query getting all teams in database.
 		String queryStatement = "SELECT team FROM Team team";
 		List<Team> allTeams = em.createQuery(queryStatement, Team.class).getResultList();
-		
+
 		return allTeams;
 	}
 

@@ -9,13 +9,15 @@
 </head>
 <body>
 
-	<h1><a href="/">NBA Stats App</a></h1>
+	<h1>
+		<a href="/">NBA Stats App</a>
+	</h1>
 	<p>A place for NBA stats nerds to get statistics quickly!</p>
 	<br>
 	<div class="searchBox">
 		<form action="search.do" method="POST">
-			<input type="text" name="searchKeyword"> 
-			<input type="submit" value="SEARCH!">
+			<input type="text" name="searchKeyword"> <input type="submit"
+				value="SEARCH!">
 		</form>
 	</div>
 	<br>
@@ -26,16 +28,15 @@
 	</div>
 	<br>
 	<c:if test="${! empty Teams }">
-	
-	<c:forEach var="team" items="${Teams }">
-	<a href="/">
-	<img alt="team's logo" src="${team.logo }">
-	<p>${team.teamName }</p>
-	</a>
-	<br>
-	</c:forEach>
-	
-	
+
+		<c:forEach var="team" items="${Teams }">
+			<a href="/"> <img alt="team's logo" src="${team.logo }">
+				<p>${team.teamName }</p>
+			</a>
+			<br>
+		</c:forEach>
+
+
 	</c:if>
 
 </body>
