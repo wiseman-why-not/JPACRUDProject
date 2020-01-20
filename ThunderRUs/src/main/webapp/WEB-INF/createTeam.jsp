@@ -13,7 +13,7 @@
 	<p>A place for NBA stats nerds to get statistics quickly!</p>
 	<br>
 	
-	<form action="createTeam.do" Method="POST">
+	<form action="createTeamInDB.do" Method="POST">
 	<fieldset>
 	Team Name: <input type="text" name="teamName"  placeholder="Team Name" required><br>
 	Games Played: <input type="number" name="gamesPlayed" min="0" max="82" step="1" value="0" required><br>

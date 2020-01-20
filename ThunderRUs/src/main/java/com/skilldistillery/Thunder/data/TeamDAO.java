@@ -10,4 +10,10 @@ public interface TeamDAO {
 	
 	public List<Team> getTeamByName(String teamName);
 
+	public Team updateTeam(Team team);
+
+	public Team createTeam(Team team);
+
+	Team deleteTeam(Team team);
+
 }

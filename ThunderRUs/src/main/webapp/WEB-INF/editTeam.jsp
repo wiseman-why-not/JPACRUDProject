@@ -13,7 +13,7 @@
 	<p>A place for NBA stats nerds to get statistics quickly!</p>
 	<br>
 	
-	<form action="updateTeamInDB" Method="POST">
+	<form action="updateTeamInDB.do" Method="POST">
 	<fieldset>
 	Team Name: <input type="text" name="teamName" required placeholder="${team.teamName }"><br>
 	Games Played: <input type="number" name="gamesPlayed" min="0" max="82" step="1" required value="${team.gamesPlayed }"><br>
@@ -38,7 +38,7 @@
 	Steals: <input type="number" name="steals" min="0.0" max="100.00" step=".1" required value="${team.steals }"><br>
 	Blocks: <input type="number" name="blocks" min="0.0" max="100.00" step=".1" required value="${team.blocks }"><br>
 	Personal Fouls: <input type="number" name="personalFouls" min="0.0" max="100.00" step=".1" required value="${team.personalFouls }"><br>
-	<input type="hidden" name="teamId">
+	<input type="hidden" name="id" value="${team.id }">
 	<input type="submit" name="submit" value="Submit">
 	</fieldset>
 	</form>
