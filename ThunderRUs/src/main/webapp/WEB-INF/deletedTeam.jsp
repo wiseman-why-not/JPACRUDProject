@@ -6,13 +6,19 @@
 <meta charset="UTF-8">
 <title>NBA Stats!</title>
 <jsp:include page="style.jsp" />
+<style>
+        body { background-color: #1C2331; padding: 5px; align-content: center; }
+		h1 { color: white; text-align: center; }
+		blockquote { color: white; text-align: center; }
+        p { color: white; }
+    </style>
 </head>
 <body>
 
 	<h1 class="display-2">
 		<a href="/">NBA Stats App</a>
 	</h1>
-	<p>A place for NBA stats nerds to get statistics quickly!</p>
+	<blockquote>A place for NBA stats nerds to get statistics quickly!</blockquote>
 	<br>
 
 	<h2>Deleted Team</h2>
